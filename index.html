@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jokeNquote</title>
+    <link rel="stylesheet" href="box.css">
+    <script src="https://kit.fontawesome.com/b7514a30f9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="logo"><img src="C:\Users\whynew.in\OneDrive\Desktop\jokeNquote\logo.png"></div>
+ <div class="container">
+   
+  <div class="jokebox">
+    <div class="joketext">joke</div>
+    <div class="joke-box">
+        <h2>joke of the day</h2>
+        <div class="bar"></div>
+        <blockquote id="joke">loading....</blockquote>
+        <div>
+            <button id="get_joke">new joke</button>
+            <button onclick="tweet2()"><i class="fa-brands fa-twitter"></i>tweet</button>
+            <button onclick="copy2()"><i class="fa-solid fa-copy"></i>copy</button>
+        </div>
+    </div>
+  </div>
+ 
+  <div class="quotebox">
+    <div class="quotetext">quote</div>
+    <div class="qoute-box">
+        
+      <h2>quote of the day</h2>
+      <div class="bar"></div>
+      <blockquote id="quote">loading....</blockquote>
+      <span id="author">loading........</span>
+      <div>
+          <button onclick="getquote(api_url)">new quote</button>
+          <button onclick="tweet()" class="tweet"><i class="fa-brands fa-twitter"></i>tweet</button>
+          <button onclick="copy()" id="copyBtn"><i class="fa-solid fa-copy"></i>copy</button>
+      </div>
+  </div>
+  </div> 
+
+ </div>
+<script src="app.js"></script>
+</body>
+</html>

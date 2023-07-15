@@ -1,0 +1,393 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #07A0C3;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+}
+.logo img{
+  top: -40px;
+  left: 0;
+  width: 200px;
+  position: absolute;
+  z-index: 10;
+}
+.container{
+  width: 800px;
+  height: 515px;
+  border-radius: 34px;
+  background: #F0C808;
+  box-shadow: 15px 12px 16px -3px #00000040;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.jokebox{
+  width: 115px;
+  height: 200px;
+  border-radius: 22px;
+  background: #086788;
+  transition: all .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jokebox:hover{
+  height: 370px;
+  width: 600px;
+}
+
+.quotebox {
+	width: 115px;
+	height: 200px;
+  /* height: 370px;
+  width: 600px;  */
+	border-radius: 22px;
+	background: #086788;
+  transition: all .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotebox:hover{
+  height: 370px;
+  width: 600px;
+  font-size: large;
+}
+
+.quotebox:hover .qoute-box{
+  display: block;
+}
+
+.qoute-box:hover{
+  opacity: 1;
+}
+
+.quotebox:hover .quotetext{
+  display: none;
+}
+
+.quotetext{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.jokebox:hover .joke-box{
+  display: block;
+}
+
+.joketext{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.jokebox:hover .joketext{
+  display: none;
+}
+
+.joke-box:hover{
+  opacity: 1;
+}
+
+@media (max-width :540px){
+  .logo img{
+    top: -20px;
+    width: 147px;
+  }
+  .container{
+    width: 353px;
+    height: 532px;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .quotebox{
+    width: 89px;
+    height: 129px;
+  }
+
+  .jokebox{
+    width: 89px;
+    height: 129px;
+    clear: both;
+  }
+
+  .jokebox:hover{
+    height: 379px;
+    width: 329px;
+  }
+  .quotebox:hover{
+    height: 379px;
+    width: 329px;
+
+  }
+
+}
+
+
+/* --------------inside jokebox---------------- */
+
+
+.joke-box{
+  display: none;
+  height: 370px;
+  width: 600px;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 2s .3s;
+}
+
+.joke-box h2{
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 22px;
+  margin-top: 20px;
+}
+
+.joke-box .bar{
+  width: 255px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f0c808;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 170px;
+}
+
+.joke-box blockquote{
+  font-size: 23px;
+  height: 160px;
+  padding: 0 15px 0 15px;
+}
+
+.joke-box blockquote::before,
+.joke-box blockquote::after{
+  content: '"';
+}
+
+.joke-box span{
+  display: block;
+  margin-top: 16px;
+  margin-right: 20px;
+  float: right;
+  position: relative;
+}
+
+.joke-box div{
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.joke-box button{
+  background: transparent;
+  color: #fff;
+  border-radius: 25px;
+  border: 3px solid #f0c808;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer; 
+  text-transform: uppercase;
+  font-weight: bold;
+} 
+
+.joke-box span::before{
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: #f0c808;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+}
+
+.joke-box button i{
+  width: 20px;
+  margin-right: 10px;
+} 
+.joke-box button:nth-child(2){
+  background: #f0c808;
+  color: #333;
+}
+
+@media (max-width :540px){
+  .joke-box{
+    height: 379px;
+    width: 329px;;
+  }
+  .joke-box h2{
+    font-size: 30px;
+  }
+  .joke-box .bar{
+    width: 255px;
+    height: 3px;
+    margin-top: -20px;
+    margin-left: 35px;
+  }
+
+  .joke-box blockquote{
+    font-size: 23px;
+    height: 186px;
+  }
+  .joke-box button{
+    width: 96px;
+    height: 44px;
+  } 
+
+
+
+}
+
+
+
+
+
+/* --------------inside qoutebox---------------- */
+
+.qoute-box{
+  display: none;
+  height: 370px;
+  width: 600px; 
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 2s .3s;
+}
+
+
+.qoute-box h2{
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 22px;
+  margin-top: 20px;
+}
+
+.qoute-box .bar{
+  width: 255px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f0c808;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 170px;
+}
+
+.qoute-box blockquote{
+  font-size: 23px;
+  height: 163px;
+  padding: 0 15px 0 15px;
+}
+
+.qoute-box blockquote::before, 
+.qoute-box blockquote::after{
+  content: '"';
+}
+
+.qoute-box span{
+  display: block;
+  margin-top: 16px;
+  margin-right: 20px;
+  float: right;
+  position: relative;
+}
+.qoute-box div{
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.qoute-box button{
+  background: transparent; 
+  color: #fff;
+  border-radius: 25px;
+  border: 3px solid #f0c808;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer; 
+  text-transform: uppercase;
+  font-weight: bold;
+} 
+.qoute-box button:active ,
+.joke-box button:active{
+  transform: scale(0.95);
+}
+.qoute-box span::before{
+  content: '';
+  width: 20px;
+  height: 3px;
+  background: #f0c808;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+}
+
+.qoute-box button i{
+  width: 20px;
+  margin-right: 5px;
+} 
+
+.qoute-box button:nth-child(2){
+  background: #f0c808;
+  color: #333;
+} 
+
+
+
+
+
+@media (max-width :540px){
+  .qoute-box{
+    height: 379px;
+    width: 329px;;
+  }
+  .qoute-box h2{
+    font-size: 30px;
+  }
+  .qoute-box .bar{
+    width: 255px;
+    height: 3px;
+    margin-top: -20px;
+    margin-left: 35px;
+  }
+
+  .qoute-box blockquote{
+    font-size: 20px;
+    height: 188px;
+  }
+  .qoute-box button{
+    width: 96px;
+    height: 44px;
+    font-size: 12px;
+  } 
+
+
+}
